@@ -70,10 +70,22 @@ function draw (width, height, bounds, data) {
   
     // Loop over the features…
     for (var i = 0; i < data.length; i++) {
-      if (search(data[i].properties.postalCode) > 60){
-        context.fillStyle = '#F33';
+      if (search(data[i].properties.postalCode) < 60){
+        context.fillStyle = '#100';
       }else {
-        context.fillStyle = '#333';
+         if (search(data[i].properties.postalCode) < 120){
+			context.fillStyle = '#200';
+		  }else {
+			 if (search(data[i].properties.postalCode) < 180){
+				context.fillStyle = '#300';
+			  }else {
+				 if (search(data[i].properties.postalCode) < 240){
+					context.fillStyle = '#500';
+				  }else {
+					context.fillStyle = '#F00';
+				  }
+			  }
+		  }
       }
       // …pulling out the coordinates…
       coords = data[i].geometry.coordinates[0];
