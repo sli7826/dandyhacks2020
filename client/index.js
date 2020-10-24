@@ -100,4 +100,4 @@ function draw (width, height, bounds, data) {
     }
 }
 
-draw(500, 500, getBoundingBox(geodata), geodata)
+draw(800, 800, getBoundingBox(geodata), geodata)
