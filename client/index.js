@@ -1,4 +1,5 @@
 var geodata = data[0];
+var covid = coviddata[0];
 
     /*var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
@@ -56,7 +57,7 @@ function draw (width, height, bounds, data) {
     // Get the drawing context from our <canvas> and
     // set the fill to determine what color our map will be.
     context = canvas.getContext('2d');
-    context.fillStyle = '#333';
+    context.fillStyle = '#AAA';
   
     // Determine how much to scale our coordinates by
     xScale = width / Math.abs(bounds.xMax - bounds.xMin);
@@ -69,7 +70,11 @@ function draw (width, height, bounds, data) {
   
     // Loop over the features…
     for (var i = 0; i < data.length; i++) {
-  
+      if (search(data[i].properties.postalCode) > 60){
+        context.fillStyle = '#F33';
+      }else {
+        context.fillStyle = '#333';
+      }
       // …pulling out the coordinates…
       coords = data[i].geometry.coordinates[0];
   
@@ -100,4 +105,12 @@ function draw (width, height, bounds, data) {
     }
 }
 
-draw(800, 800, getBoundingBox(geodata), geodata)
+function search(zipcode){
+  for (var i = 0; i < covid.length; i++){
+    if (zipcode == covid[i].MODIFIED_ZCTA){
+      return parseInt(covid[i].COVID_DEATH_COUNT);
+    }
+  }
+}
+
+draw(500, 500, getBoundingBox(geodata), geodata)
