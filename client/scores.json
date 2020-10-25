@@ -1,214 +1,214 @@
-scoresdata=[
+[
   {
     "Location": "United States",
-    "Covid Score": 34.1362
+    "score": 34.1362
   },
   {
     "Location": "Alabama",
-    "Covid Score": 35.7887
+    "score": 35.7887
   },
   {
     "Location": "Alaska",
-    "Covid Score": 28.6676
+    "score": 28.6676
   },
   {
     "Location": "Arizona",
-    "Covid Score": 36.2238
+    "score": 36.2238
   },
   {
     "Location": "Arkansas",
-    "Covid Score": 35.2131
+    "score": 35.2131
   },
   {
     "Location": "California",
-    "Covid Score": 31.5633
+    "score": 31.5633
   },
   {
     "Location": "Colorado",
-    "Covid Score": 31.463
+    "score": 31.463
   },
   {
     "Location": "Connecticut",
-    "Covid Score": 36.3895
+    "score": 36.3895
   },
   {
     "Location": "Delaware",
-    "Covid Score": 39.2239
+    "score": 39.2239
   },
   {
     "Location": "District of Columbia",
-    "Covid Score": 28.315
+    "score": 28.315
   },
   {
     "Location": "Florida",
-    "Covid Score": 41.1128
+    "score": 41.1128
   },
   {
     "Location": "Georgia",
-    "Covid Score": 31.2358
+    "score": 31.2358
   },
   {
     "Location": "Hawaii",
-    "Covid Score": 38.6419
+    "score": 38.6419
   },
   {
     "Location": "Idaho",
-    "Covid Score": 33.1896
+    "score": 33.1896
   },
   {
     "Location": "Illinois",
-    "Covid Score": 33.4398
+    "score": 33.4398
   },
   {
     "Location": "Indiana",
-    "Covid Score": 33.4786
+    "score": 33.4786
   },
   {
     "Location": "Iowa",
-    "Covid Score": 35.3523
+    "score": 35.3523
   },
   {
     "Location": "Kansas",
-    "Covid Score": 33.7026
+    "score": 33.7026
   },
   {
     "Location": "Kentucky",
-    "Covid Score": 34.9268
+    "score": 34.9268
   },
   {
     "Location": "Louisiana",
-    "Covid Score": 33.5064
+    "score": 33.5064
   },
   {
     "Location": "Maine",
-    "Covid Score": 41.9385
+    "score": 41.9385
   },
   {
     "Location": "Maryland",
-    "Covid Score": 33.8321
+    "score": 33.8321
   },
   {
     "Location": "Massachusetts",
-    "Covid Score": 35.3111
+    "score": 35.3111
   },
   {
     "Location": "Michigan",
-    "Covid Score": 36.1212
+    "score": 36.1212
   },
   {
     "Location": "Minnesota",
-    "Covid Score": 33.7239
+    "score": 33.7239
   },
   {
     "Location": "Mississippi",
-    "Covid Score": 34.2785
+    "score": 34.2785
   },
   {
     "Location": "Missouri",
-    "Covid Score": 35.255
+    "score": 35.255
   },
   {
     "Location": "Montana",
-    "Covid Score": 38.7356
+    "score": 38.7356
   },
   {
     "Location": "Nebraska",
-    "Covid Score": 33.3502
+    "score": 33.3502
   },
   {
     "Location": "Nevada",
-    "Covid Score": 33.7195
+    "score": 33.7195
   },
   {
     "Location": "New Hampshire",
-    "Covid Score": 38.0647
+    "score": 38.0647
   },
   {
     "Location": "New Jersey",
-    "Covid Score": 34.4613
+    "score": 34.4613
   },
   {
     "Location": "New Mexico",
-    "Covid Score": 36.5556
+    "score": 36.5556
   },
   {
     "Location": "New York",
-    "Covid Score": 34.9324
+    "score": 34.9324
   },
   {
     "Location": "North Carolina",
-    "Covid Score": 34.8677
+    "score": 34.8677
   },
   {
     "Location": "North Dakota",
-    "Covid Score": 32.357
+    "score": 32.357
   },
   {
     "Location": "Ohio",
-    "Covid Score": 35.6093
+    "score": 35.6093
   },
   {
     "Location": "Oklahoma",
-    "Covid Score": 32.984
+    "score": 32.984
   },
   {
     "Location": "Oregon",
-    "Covid Score": 36.6754
+    "score": 36.6754
   },
   {
     "Location": "Pennsylvania",
-    "Covid Score": 37.7076
+    "score": 37.7076
   },
   {
     "Location": "Rhode Island",
-    "Covid Score": 36.4639
+    "score": 36.4639
   },
   {
     "Location": "South Carolina",
-    "Covid Score": 37.1982
+    "score": 37.1982
   },
   {
     "Location": "South Dakota",
-    "Covid Score": 35.2428
+    "score": 35.2428
   },
   {
     "Location": "Tennessee",
-    "Covid Score": 34.5048
+    "score": 34.5048
   },
   {
     "Location": "Texas",
-    "Covid Score": 28.3064
+    "score": 28.3064
   },
   {
     "Location": "Utah",
-    "Covid Score": 25.3054
+    "score": 25.3054
   },
   {
     "Location": "Vermont",
-    "Covid Score": 40.4958
+    "score": 40.4958
   },
   {
     "Location": "Virginia",
-    "Covid Score": 34.0707
+    "score": 34.0707
   },
   {
     "Location": "Washington",
-    "Covid Score": 33.2729
+    "score": 33.2729
   },
   {
     "Location": "West Virginia",
-    "Covid Score": 40.3235
+    "score": 40.3235
   },
   {
     "Location": "Wisconsin",
-    "Covid Score": 35.8208
+    "score": 35.8208
   },
   {
     "Location": "Wyoming",
-    "Covid Score": 34.9841
+    "score": 34.9841
   },
   {
     "Location": "Puerto Rico",
-    "Covid Score": 41.2954
+    "score": 41.2954
   }
-];
+]
