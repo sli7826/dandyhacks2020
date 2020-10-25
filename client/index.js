@@ -1,5 +1,6 @@
 var geodata = data[0];
 var covid = coviddata[0];
+var scores=scoresdata[0];
 
     /*var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
@@ -143,6 +144,14 @@ function search(zipcode){
   for (var i = 0; i < covid.length; i++){
     if (zipcode == covid[i].MODIFIED_ZCTA){
       return parseInt(covid[i].COVID_DEATH_COUNT);
+    }
+  }
+}
+
+function findscore(state){
+  for (var i = 0; i < scores.length; i++){
+    if (state == scores[i].Location){
+      return parseInt(covid[i]."Covid Score");
     }
   }
 }

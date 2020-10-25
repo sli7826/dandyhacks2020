@@ -1,4 +1,4 @@
-[
+scoresdata=[
   {
     "Location": "United States",
     "Covid Score": 34.1362
@@ -211,4 +211,4 @@
     "Location": "Puerto Rico",
     "Covid Score": 41.2954
   }
-]
+];
