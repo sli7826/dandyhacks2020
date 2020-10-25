@@ -1,6 +1,6 @@
 var geodata = data[0];
 var covid = coviddata[0];
-var scores=scoresdata[0];
+var scores=scoresdata;
 
     /*var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
@@ -71,11 +71,33 @@ function draw (width, height, bounds, data) {
   
     // Loop over the features…
     for (var i = 0; i < data.length; i++) {
-      /*if (search(data[i].properties.postalCode) > 60){
-        context.fillStyle = '#F33';
+		console.log(data[i].properties.name);
+		console.log(findscore(data[i].properties.name));
+      if (findscore(data[i].properties.name) < 26.0){
+        context.fillStyle = '#F00';
       }else {
-        context.fillStyle = '#333';
-      }*/
+        if (findscore(data[i].properties.name) < 29.0){
+			context.fillStyle = '#D00';
+		  }else {
+			if (findscore(data[i].properties.name) < 32.0){
+				context.fillStyle = '#A00';
+			  }else {
+				if (findscore(data[i].properties.name) < 35.0){
+					context.fillStyle = '#800';
+				  }else {
+					if (findscore(data[i].properties.name) < 38.0){
+						context.fillStyle = '#600';
+					  }else {
+						if (findscore(data[i].properties.name) < 41.0){
+							context.fillStyle = '#400';
+						  }else {
+							context.fillStyle = '#200';
+						  }
+					  }
+				  }
+			  }
+		  }
+      }
       // …pulling out the coordinates…
       if (data[i].geometry.type == data[20].geometry.type){
         data[i].geometry.coordinates.forEach(function(coords1){
@@ -151,9 +173,10 @@ function search(zipcode){
 function findscore(state){
   for (var i = 0; i < scores.length; i++){
     if (state == scores[i].Location){
-      return parseInt(covid[i]."Covid Score");
+      return scores[i].score;
     }
   }
 }
 
 draw(400, 500, getBoundingBox(geodata), geodata);
+console.log(findscore("Alabama"));
