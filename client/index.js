@@ -57,7 +57,7 @@ function draw (width, height, bounds, data) {
     // Get the drawing context from our <canvas> and
     // set the fill to determine what color our map will be.
     context = canvas.getContext('2d');
-    context.fillStyle = '#AAA';
+    context.fillStyle = '#333';
   
     // Determine how much to scale our coordinates by
     xScale = width / Math.abs(bounds.xMax - bounds.xMin);
@@ -70,26 +70,16 @@ function draw (width, height, bounds, data) {
   
     // Loop over the features…
     for (var i = 0; i < data.length; i++) {
-      if (search(data[i].properties.postalCode) < 60){
-        context.fillStyle = '#100';
+      /*if (search(data[i].properties.postalCode) > 60){
+        context.fillStyle = '#F33';
       }else {
-         if (search(data[i].properties.postalCode) < 120){
-			context.fillStyle = '#200';
-		  }else {
-			 if (search(data[i].properties.postalCode) < 180){
-				context.fillStyle = '#300';
-			  }else {
-				 if (search(data[i].properties.postalCode) < 240){
-					context.fillStyle = '#500';
-				  }else {
-					context.fillStyle = '#F00';
-				  }
-			  }
-		  }
-      }
+        context.fillStyle = '#333';
+      }*/
       // …pulling out the coordinates…
-      coords = data[i].geometry.coordinates[0];
-  
+      if (data[i].geometry.type == data[20].geometry.type){
+        data[i].geometry.coordinates.forEach(function(coords1){
+          var feat={'type':'Polygon','coordinates':coords1};
+          coords = feat.coordinates[0];
       // …and for each coordinate…
       for (var j = 0; j < coords.length; j++) {
   
@@ -98,7 +88,39 @@ function draw (width, height, bounds, data) {
         // Scale the points of the coordinate
         // to fit inside our bounding box
         point = {
-            x: (longitude - bounds.xMin) * scale + 300,
+            x: (longitude - bounds.xMin) * scale + 700,
+            y: (bounds.yMax - latitude) * scale + 700
+        };
+        // If this is the first coordinate in a shape, start a new path
+        if (j === 0) {
+          context.beginPath();
+          context.moveTo(point.x, point.y);
+  
+        // Otherwise just keep drawing
+        } else {
+          context.lineTo(point.x, point.y);
+        }
+      }
+  
+      // Fill the path we just finished drawing with color
+      context.fill();
+          }
+       );
+       continue;
+      }
+
+
+
+      coords = data[i].geometry.coordinates[0];
+      // …and for each coordinate…
+      for (var j = 0; j < coords.length; j++) {
+  
+        longitude = coords[j][0];
+        latitude = coords[j][1];
+        // Scale the points of the coordinate
+        // to fit inside our bounding box
+        point = {
+            x: (longitude - bounds.xMin) * scale + 700,
             y: (bounds.yMax - latitude) * scale + 700
         };
         // If this is the first coordinate in a shape, start a new path
@@ -125,4 +147,4 @@ function search(zipcode){
   }
 }
 
-draw(500, 500, getBoundingBox(geodata), geodata)
+draw(400, 500, getBoundingBox(geodata), geodata);
