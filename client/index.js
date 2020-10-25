@@ -144,7 +144,7 @@ function draw (width, height, bounds, data) {
         // to fit inside our bounding box
         point = {
             x: (longitude - bounds.xMin) * scale + 700,
-            y: (bounds.yMax - latitude) * scale + 700
+            y: (bounds.yMax - latitude) * scale + 400
         };
         // If this is the first coordinate in a shape, start a new path
         if (j === 0) {
